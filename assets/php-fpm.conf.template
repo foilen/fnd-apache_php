@@ -1,0 +1,14 @@
+[global]
+pid = @@STATE_DIR@@/php-fpm.pid
+error_log = @@STATE_DIR@@/php-fpm.log
+daemonize = no
+
+[www]
+listen = @@PHP_FPM_SOCK@@
+pm = dynamic
+pm.max_children = 10
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 5
+catch_workers_output = yes
+clear_env = no

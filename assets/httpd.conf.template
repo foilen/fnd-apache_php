@@ -1,0 +1,14 @@
+ServerRoot "@@APACHE_HTTPD@@"
+PidFile @@STATE_DIR@@/httpd.pid
+@@LISTEN_DIRECTIVES@@
+
+ServerName localhost
+ServerTokens Prod
+
+ErrorLog @@STATE_DIR@@/httpd-error.log
+LogLevel warn
+LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+
+Include @@APACHE_MODULES_CONF@@
+
+IncludeOptional "@@SITES_ENABLED_DIR@@/*.conf"

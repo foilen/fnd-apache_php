@@ -1,0 +1,8 @@
+account default
+host @@EMAIL_HOSTNAME@@
+port @@EMAIL_PORT@@
+auth on
+user @@EMAIL_USER@@
+password @@EMAIL_PASSWORD@@
+tls on
+tls_certcheck off

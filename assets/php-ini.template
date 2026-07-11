@@ -1,0 +1,10 @@
+[PHP]
+max_execution_time = @@PHP_MAX_EXECUTION_TIME_SEC@@
+
+upload_max_filesize = @@PHP_MAX_UPLOAD_FILESIZE_MB@@M
+post_max_size = 0
+max_file_uploads = 100
+
+memory_limit = @@PHP_MAX_MEMORY_LIMIT_MB@@M
+
+sendmail_path = "${SENDMAIL_TO_MSMTP}/bin/sendmail -t -i"
