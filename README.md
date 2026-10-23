@@ -125,6 +125,6 @@ Not automated. There's no `certbot` Apache plugin in nixpkgs, so provisioning ce
 # Release
 
 ```
-./step-git-tag.sh 8.4.11
+./step-git-tag.sh 8.4.27
 git push --tags
 ```
