@@ -2,7 +2,7 @@
   description = "Apache + PHP environment";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     flake-utils.url = "github:numtide/flake-utils";
     sendmail-to-msmtp-src = {
       url = "github:foilen/sendmail-to-msmtp";
@@ -22,7 +22,7 @@
         pkgs = import nixpkgs { inherit system; };
 
         # PHP with the extensions needed by this project.
-        php = pkgs.php.withExtensions (
+        php = pkgs.php85.withExtensions (
           { enabled, all }:
           enabled
           ++ (with all; [
