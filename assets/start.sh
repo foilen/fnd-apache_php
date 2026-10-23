@@ -146,6 +146,9 @@ EOF
   echo '}'
 } > "$STATE_DIR/config.json"
 
+# The email settings are now in msmtprc; don't let php-fpm/apache see them.
+unset EMAIL_DEFAULT_FROM_ADDRESS EMAIL_HOSTNAME EMAIL_PORT EMAIL_USER EMAIL_PASSWORD
+
 export STATE_DIR
 export HOME="$STATE_DIR/home"
 export SENDMAIL_TO_MSMTP_MSMTPRC_PATH="$STATE_DIR/msmtprc"
